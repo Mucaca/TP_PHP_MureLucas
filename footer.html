@@ -1,0 +1,55 @@
+<ul id="menu_horizontal">
+	<li class="bouton_gauche"><a href="index.php">Home</a></li>
+	<li class="bouton_gauche"><a href="showclients.php">Show clients</a></li>
+	<li class="bouton_gauche"><a href="AjoutClientBDD.php">Add in client table</a></li>
+	<li class="bouton_gauche"><a href="affichageBDD.php">Find in table</a></li>
+	<li class="bouton_gauche"><a href="UpdateData.php">Update Data</a></li>
+		<?php
+		if (isset($_SESSION['pseudo']))
+		{?>
+			<li class="bouton_gauche"><?php echo ('Vous êtes connecté en tant que ').$_SESSION['pseudo'];?></li>
+		<?php
+		}
+	?>
+	<li class="bouton_droite"><a href="CreerCompte.php">Create an account</a></li>
+	<li class="bouton_droite"><a href="deconnexion.php">Deconnection</a></li>
+</ul>
+<style>
+	ul#menu_horizontal { 
+			width : 800; 
+			height : 30px;
+			margin : 2em 0 0 0;
+			padding : 0;
+			border : 1px dashed black;
+			list-style-type : none; 
+			}
+			 
+			ul#menu_horizontal li {
+			padding : 0 0.5em;  
+			line-height : 30px;
+			}
+			 
+			ul#menu_horizontal li.bouton_gauche {
+			float : left;
+			border-right : 1px dashed black; 
+			}
+			 
+			ul#menu_horizontal li.bouton_droite {
+			float : right;
+			border-left : 1px dashed black;
+			}
+			 
+			ul#menu_horizontal a {
+			color : black;
+			text-decoration : none;
+			padding : 0 0.5em; 
+			font :  0.8em "Trebuchet MS";
+			}
+			 
+			ul#menu_horizontal a:hover { text-decoration : underline; }
+			 
+			ul#menu_horizontal a img { 
+			border : none;
+			padding :  0 0.3em;
+			}
+</style>
